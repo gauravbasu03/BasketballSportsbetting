@@ -11,7 +11,17 @@ data = r['resultSet']['rowSet']
 #print(data)
 headers2 = ['Rank','Player','min','fg_pct','ft_pct','pts']
 df1 = data[0][2]
+
+#print(pd.DataFrame(data, columns = headers))
+
 for i in range(5):
-    print(data[i][2])
-    print(data[i][7])
+    print("NAME = " + str(data[i][2]))
+    print("MIN = " + str(data[i][6]))
+    print("FG_PCT = " + str(data[i][9]))
+    print("REB = " + str(data[i][18]))
+    print("AST = " + str(data[i][19]))
+    print("PTS = " + str(data[i][23]))
+    print("PTS+REB+AST = " + str(data[i][18]+data[i][19]+data[i][23]))
+    print("----------------------------------------")
+
 
